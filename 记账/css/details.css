@@ -1,0 +1,147 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+html,body{
+	font-family: '微软雅黑',Arial,'Times New Roman';
+	padding: 0px;
+	height: 100%;
+	width: 100%;
+	min-width:1024px;
+	color: #555;
+	
+}
+h1,h2,h3,h4,h5,h6,a{
+	text-decoration: none;
+	}
+
+ul,ol{
+	list-style: none;
+}
+
+img{
+	border: none;
+}
+
+a{
+	font-size: 14px;
+	color: #555;
+}
+table,td，th,tr{
+      border: 0;
+}
+
+body{
+		background: #eee;
+	}
+.container{
+			width: 100%;
+			height:auto;
+			background: #fff;
+			display: flex;
+			flex-direction:column;
+			overflow: hidden;
+			overflow-y:auto;
+            -webkit-overflow-scrolling:touch;
+		}
+.status{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding:0 1rem ;
+}
+.tab{	
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding:0 1rem ;
+
+}
+.accounts::-webkit-scrollbar {
+         display: none;
+       }
+
+.accounts,.charts{
+   width:100%;
+   height: 34rem;
+   overflow: hidden;
+   /*padding-top:2.5rem;
+   padding-left: 2.5rem;*/
+   display:-webkit-box;
+   flex-direction: row;
+   align-items: center;
+   overflow-x: auto;
+   -webkit-overflow-scrolling:touch
+}
+.accounts::-webkit-scrollbar {
+         display: none;
+       }
+
+.accounts_one,.accounts_two,.accounts_three{
+	width:56rem;
+	height:32rem;
+	background:linear-gradient(to left top,#FD6585,#FFD3A5);
+	border-radius: 2.5rem;
+	margin-right: 2rem;
+	box-shadow: 0.5rem 1rem 1.5rem 0 rgba(253,101,133,0.3)
+}
+.accounts_one{
+	margin-left: 2rem
+}
+.accounts_two{
+	background:linear-gradient(to left top,#5961F9,#EE9AE5);
+	box-shadow: 0.5rem 1rem 1.5rem 0 rgba(89,97,249,0.3)
+}
+.accounts_three{
+	background:linear-gradient(to left top,#736EFE,#5EFCE8);
+	box-shadow: 0.5rem 1rem 1.5rem 0 rgba(115,110,254,0.3)
+}
+
+.charts{
+   height: 20rem; 
+}
+.charts::-webkit-scrollbar {
+         display: none;
+       }
+
+.charts_one,.charts_two,.charts_three{
+	width: 24rem;
+	height: 16rem;
+	background: #fff;
+	box-shadow: 0.5rem 1rem 1.5rem 0.2rem rgba(0,0,0,0.1);
+	margin-right: 2rem;
+	border-radius: 1.6rem;
+
+}
+.charts_one{
+	margin-left: 2rem
+}
+.list{
+	width: 100%;
+	height:100%;
+	display:flex;
+	flex-direction: column;
+	padding-left:2.5rem;
+	margin-top: 0.5rem;
+}
+.list>li{
+	width: 92%;
+	height: 16rem;
+	background: #fff;
+	box-shadow: 0.2rem 1rem 1.5rem 0.2rem rgba(0,0,0,0.1);
+	border-radius: 1.6rem;
+	margin-bottom:2.5rem;
+	overflow: hidden;
+}
+.list>li>a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.label{
+	width: 2.5rem;
+	height: 100%;
+	background: #000;
+	display: block;
+}

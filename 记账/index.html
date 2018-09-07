@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>计算</title>
+<link rel="stylesheet" href="css/index.css">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="js/index.js"></script>
+</head>
+<body>
+	 <div class="container">
+	 	<!--总资产-->
+		 	<a href="details.html">
+		 		 <div class="assets">
+		 		 	<div class="status" style="height: 4rem;line-height: 4rem ;">
+		 		 		<img src="image/signal_light.png" style="width:4rem;height: 3rem;margin-top:1rem">
+		 		 		<span style="font-size: 2rem;color: #fff;font-weight: 500;">上午<span>10:15</span></span>
+		 		 		<img src="image/cell_light.png" style="width:4rem;height: 3rem">
+		 		 	</div>
+		 	     </div>
+		 	</a>
+		 <!--图表-->
+	 	<div class="charts">
+		    <div class="charts_one"></div>
+		 	<div class="charts_two"></div>
+		 	<div class="charts_three"></div>	
+	 	</div>
+	 	<!--月列表-->
+	    <ul class="list">
+		 	<li  class="newOne"id="newOne" style="opacity: 0;width: 0;display: none;">
+		 		<a href="">
+		 			<span class="label "style="background:#5961F9;"></span>
+		 		</a>
+		 	</li>
+		 	<li>
+		 		<a href="">
+		 			<span class="label"style="background:#FD6585;"></span>
+		 		</a>
+		 	</li>
+		 	<li>
+		 		<a href="">
+		 			<span class="label"style="background:#fdc665;"></span>
+		 		</a>
+		 	</li>
+		 	<li>
+		 		<a href="">
+		 			<span class="label"style="background:#F55555;"></span>
+		 		</a>
+		 	</li>
+		 	<li>
+		 		<a href="">
+		 			<span class="label"style="background:#a2e376;"></span>
+		 		</a>
+		 	</li>
+	     </ul>
+	     <div class="mask" id="mask" style="width: 100%;height: 100%;background:rgba(0,0,0,0.5);position:fixed;"></div>
+	     <div class="creatPage" id="creatPage"style="width: 94%;height:74rem;">
+	     	 <div class="content" style="width: 100%;height: 100%;overflow: hidden;">
+		     	<div class="charge" >
+		     		<span style="margin-left: 2rem;color: #aaa">¥</span>
+		     		<input type="text" style="margin-right:2rem;height: 14rem;font-size:6rem;color:#555;border:none;text-align: right;
+		     		width: 80%;line-height:14rem;" id="je" value="" placeholder="0" />
+		     	</div>
+		        <ul class="acountsClass" id="acountsClass" style="margin-top: 4rem;" onclick="choseAcount()" >
+		        	<li class="options1 " id="sr" onclick="onSelectedOne()">收入</li>
+		        	<li class="options1 "  id="zc" onclick="onSelectedOne()">支出</li>
+		        	<li class="options1 " id="ye" onclick="onSelectedOne()">余额</li>
+		        </ul>
+		        <ul class="feeClass"  >
+		        	<li class="options2 num_1 " id="cf" onclick="onSelectedOne()">吃饭</li>
+		        	<li class="options2 "  id="gw" onclick="onSelectedOne()">购物</li>
+		        	<li class="options2 " id="yl" onclick="onSelectedOne()">娱乐</li>
+		        	<li class="options2 " id="jt" onclick="onSelectedOne()">交通</li>
+		        	<li class="options2 " id="ly" onclick="onSelectedOne()">旅游</li>
+		        	<li class="options2 " id="qt" onclick="onSelectedOne()">其他</li>
+		        </ul>
+		        <ul class="dateClass" >
+		        	<li class="options3 num_1" id="jt" onclick="onSelectedOne()">今天</li>
+		        	<li class="options3 "  id="zt" onclick="onSelectedOne()">昨天</li>
+		        	<li class="options3 " id="qi" onclick="onSelectedOne()">前天</li>
+		        	<li class="options3 " id="js" onclick="onSelectedOne()">0903</li>
+		        	<li class="options3 " id="je" onclick="onSelectedOne()">0902</li>
+		        	<li class="options3 " id="jy" onclick="onSelectedOne()">0901</li>
+		        	<li class="options3 " id="bs" onclick="onSelectedOne()">0831</li>
+		        </ul>
+		        <ul class="timeClass"  >
+		        	<li class="options4 num_1" id="jt" onclick="onSelectedOne()">0-4时</li>
+		        	<li class="options4 "  id="zt" onclick="onSelectedOne()">4-8时</li>
+		        	<li class="options4 " id="qi" onclick="onSelectedOne()">8-12时</li>
+		        	<li class="options4 " id="js" onclick="onSelectedOne()">12-16时</li>
+		        	<li class="options4 " id="je" onclick="onSelectedOne()">16-20时</li>
+		        	<li class="options4 " id="jy" onclick="onSelectedOne()">20-24时</li>
+		        </ul>
+		        <div class="number"  >
+		            <input type="value" readonly unselectable="on" class="options num_1" id="tuige" onclick="tuige()" value="<"/>
+		        	<input type="value" readonly unselectable="on" class="options " id="." onclick="jes(this.id)" value="."/>
+		        	<input type="value" readonly unselectable="on" class="options " id="0" onclick="jes(this.id)" value="0"/>
+		        	<input type="value" readonly unselectable="on" class="options " id="1" onclick="jes(this.id)" value="1"/>
+		        	<input type="value" readonly unselectable="on" class="options " id="2" onclick="jes(this.id)" value="2"/>
+		        	<input type="value" readonly unselectable="on" class="options " id="3" onclick="jes(this.id)" value="3"/>
+		        	<input type="value" readonly unselectable="on" class="options " id="4" onclick="jes(this.id)" value="4"/>
+		        	<input type="value" readonly unselectable="on" class="options " id="5" onclick="jes(this.id)" value="5"/>
+		        	<input type="value" readonly unselectable="on" class="options " id="6" onclick="jes(this.id)" value="6"/>
+		        	<input type="value" readonly unselectable="on" class="options " id="7" onclick="jes(this.id)" value="7"/>
+		        	<input type="value" readonly unselectable="on" class="options " id="8" onclick="jes(this.id)" value="8"/>
+		        	<input type="value" readonly unselectable="on" class="options " id="9" onclick="jes(this.id)" value="9"/>
+		        </div> 
+	        </div> 
+	     </div>
+	    
+	     <button class="creatBtn" id="creatBtn" style="width:10rem;height: 10rem;" onclick="showCreatPage()">
+	     		<img src="image/record.png" alt="" style="transform: scale(0.9);">
+	     </button>
+
+	     <button class="closeBtn" id="closeBtn" style="width:10rem;height: 10rem;" onclick="closeCreatPage()">
+	     		<img src="image/ok.png" alt="" style="transform: scale(0.9);">
+	     </button>
+	    
+	 </div>
+	
+</body>
+</html>
